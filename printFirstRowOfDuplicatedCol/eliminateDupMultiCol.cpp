@@ -13,10 +13,9 @@
 int main()
 {
     std::string line;
-    std::string inputFileName;
+    std::string inputFileName; 
     int colToNoDup;
     std::list<CStringA> noDupList;
-    std::ifstream inputFile(inputFileName);
 
     /* Get user inputs */
     std::cout << "Please provide the name of input file and make sure it is at the current directory (eg: input.txt): "; 
@@ -24,6 +23,7 @@ int main()
     std::cout << "Please provide the index of column that you want to get rid of duplicates, starting from 1: "; 
     std::cin >> colToNoDup; 
 
+    std::ifstream inputFile(inputFileName); 
     /* Read the input file and store distinct values in the list */
     if (inputFile.is_open())
     {
@@ -56,7 +56,7 @@ int main()
     }
     else
     {
-        std::cout << "The input file " << inputFileName << "can not open, exiting \n"; 
+        std::cout << "The input file " << inputFileName << " can not open, exiting \n"; 
     }
 
     return 0;
